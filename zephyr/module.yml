@@ -1,0 +1,4 @@
+name: tinycred
+build:
+  cmake: zephyr
+  kconfig: zephyr/Kconfig

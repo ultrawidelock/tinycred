@@ -1,0 +1,77 @@
+# SPDX-License-Identifier: Apache-2.0
+
+config TINYCRED
+	bool "tinycred: digital-key credential reader (Aliro access protocol over BLE, UWB ranging)"
+	depends on TINYPSA
+	depends on TINYUWB
+	depends on SETTINGS
+	help
+	  The credential reader: the AUTH0, AUTH1 and EXCHANGE transaction over
+	  an L2CAP channel, the P-256 and AES-256-GCM key schedule that yields
+	  the URSK, the reader identity and trust store in settings, the M1-M4
+	  ranging setup on tinyuwb, and the approach controller that turns
+	  ranges into a grant. Crypto comes from tinypsa's backend.
+
+if TINYCRED
+
+config TINYCRED_TINYBLE
+	bool "BLE transport on tinyble"
+	depends on TINYBLE
+	default y
+	help
+	  The 0xFFF2 reader service, the L2CAP credit-based channel on SPSM
+	  0x0080 and the resolvable advertisement, on tinyble.
+
+config TINYCRED_RSSI_GATE
+	bool "Hold ranging until the BLE link's RSSI says the phone is near"
+	default y
+
+config TINYCRED_STEPUP
+	bool "Credential step-up (Access Document) phase"
+	default n
+
+if TINYCRED_STEPUP
+
+config TINYCRED_STEPUP_SD_MAX
+	int "Step-up DeviceResponse collection buffer (bytes)"
+	default 1536
+
+config TINYCRED_STEPUP_MAX_DIGESTS
+	int "Step-up parser: value digests kept per document"
+	default 24
+
+config TINYCRED_STEPUP_MAX_ITEMS
+	int "Step-up parser: disclosed items kept per document"
+	default 16
+
+config TINYCRED_STEPUP_FORCE
+	bool "LAB ONLY: ask every device for its Access Document"
+	default n
+
+endif # TINYCRED_STEPUP
+
+config TINYCRED_ML_LOS
+	bool "Line-of-sight classifier from the receiver's diagnostics"
+	default n
+
+config TINYCRED_ACCESS_LISTENER
+	bool "Access verdict listener hook"
+	default y
+
+config TINYCRED_DEV_TRUST
+	bool "LAB ONLY: accept credentials with an empty trust store"
+	default n
+
+config TINYCRED_DEVICE
+	bool "The device (phone) side of the transaction, for bench initiators"
+	default n
+
+config TINYCRED_HOUSEKEEPING_STACK_SIZE
+	int "Credential housekeeping thread stack size"
+	default 3072
+
+module = TINYCRED
+module-str = tinycred
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # TINYCRED
