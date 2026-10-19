@@ -35,6 +35,27 @@ config TINYCRED_RSSI_GATE_POLL_MS
 	depends on TINYCRED_RSSI_GATE
 	default 250
 
+config TINYCRED_RSSI_GATE_OPEN_DBM
+	int "Smoothed RSSI (dBm) at or above which ranging starts"
+	depends on TINYCRED_RSSI_GATE
+	default -55
+	help
+	  Per room and per handset: measure the level at the door with the
+	  phone in hand and set this a few dB under it.
+
+config TINYCRED_RSSI_GATE_CLOSE_DBM
+	int "Smoothed RSSI (dBm) sustained below which ranging stops"
+	depends on TINYCRED_RSSI_GATE
+	default -65
+
+config TINYCRED_RSSI_GATE_MAX_HOLD_MS
+	int "Longest AP-Completed hold (ms) before ranging starts anyway; 0 never"
+	depends on TINYCRED_RSSI_GATE
+	default 0
+	help
+	  A phone that waits too long for AP-Completed drops the link and
+	  reconnects in a loop; a cap opens the gate late instead.
+
 config TINYCRED_STEPUP
 	bool "Credential step-up (Access Document) phase"
 	default n
