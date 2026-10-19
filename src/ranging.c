@@ -17,6 +17,7 @@
 #include "tinycred/ble.h"
 #include "tinycred/crypto.h"
 #include "tinycred/port.h"
+#include "tinyuwb/hw.h"
 #include "tinyuwb/setup.h"
 #include "tinyuwb/uwb.h"
 
@@ -83,10 +84,18 @@ static void setup_ev(enum tu_setup_event ev, void *user)
 
 	(void)conn; /* only the log reads it */
 	switch (ev) {
-	case TU_SETUP_EV_ACTIVE:
+	case TU_SETUP_EV_ACTIVE: {
+		const struct tu_setup_params *p = tu_setup_params();
+
 		(void)tc_lat_mark(TC_LAT_M4_DONE);
 		LOG_INF("[conn %u] UWB ranging ACTIVE (negotiated params live)", conn);
+		LOG_INF("negotiated: cfg 0x%04x ch %u code %u block %u ms slot %u rstu x%u "
+			"hop 0x%02x sts0 0x%08x time0 %llu us",
+			p->uwb_config_id, p->channel, p->sync_code_index, p->ranging_duration_ms,
+			p->slot_duration, p->slot_per_rr, p->hopping_config_bitmask, p->sts_index,
+			(unsigned long long)p->uwb_time_us);
 		break;
+	}
 	case TU_SETUP_EV_IDLE:
 		LOG_INF("[conn %u] UWB session IDLE", conn);
 		break;
@@ -103,7 +112,16 @@ int tc_ranging_init(void)
 	 * for the reset, the trims and the calibrations on the BLE host context. Not fatal:
 	 * without a radio the authentication still runs and M4 reports the failure. */
 	if (tu_prewarm(TC_RANGING_CHANNEL, TC_RANGING_CODE) == 0) {
-		LOG_INF("DW3000 ready (M4 will reuse the PHY)");
+		uint32_t otp[5], r[14];
+
+		tu_hw_otp_get(otp);
+		tu_hw_rx_regs(r);
+		LOG_INF("DW3000 ready (M4 will reuse the PHY); OTP ldo %08x %08x bias %08x "
+			"xtal %02x dgc %08x", otp[0], otp[1], otp[2], otp[3], otp[4]);
+		LOG_INF("rx regs: dgc_cfg %04x cfg0 %08x cfg1 %08x lut %08x %08x %08x %08x %08x "
+			"%08x %08x", r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9]);
+		LOG_INF("rx regs: rf_switch %08x sys_cfg %08x dtune0 %04x sfd_toc %u", r[10],
+			r[11], r[12], r[13]);
 	} else {
 		LOG_WRN("DW3000 bring-up failed; M4 handoff may not range");
 	}

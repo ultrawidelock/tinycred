@@ -53,14 +53,17 @@ static struct {
 static uint8_t s_tx_head, s_tx_n;
 static bool s_tx_inflight;
 
-/* Hand the oldest queued SDU to tinyble, if it will take it. Under the lock. */
+/* Hand the oldest queued SDU to tinyble, if it will take it. Under the lock. The flag
+ * goes up before the call: an SDU that fits one packet with a credit in hand goes out
+ * inside tb_coc_send(), and tb_on_coc_sent() has already taken it down by the return. */
 static void tx_kick(void)
 {
 	if (s_tx_inflight || s_tx_n == 0u) {
 		return;
 	}
-	if (tb_coc_send(s_tx[s_tx_head].buf, s_tx[s_tx_head].len) == 0) {
-		s_tx_inflight = true;
+	s_tx_inflight = true;
+	if (tb_coc_send(s_tx[s_tx_head].buf, s_tx[s_tx_head].len) != 0) {
+		s_tx_inflight = false;
 	}
 }
 
@@ -90,6 +93,8 @@ int tc_ble_send(uint16_t conn_handle, const uint8_t *data, size_t len)
 		memcpy(s_tx[slot].buf, data, len);
 		s_tx[slot].len = (uint16_t)len;
 		s_tx_n++;
+		LOG_DBG("coc tx queue %u B at %lld ms (queued %u, inflight %d)", (unsigned)len,
+			(long long)k_uptime_get(), s_tx_n, s_tx_inflight);
 		tx_kick();
 	}
 	tb_zephyr_unlock();
@@ -162,6 +167,7 @@ void tb_on_coc_data(const uint8_t *sdu, uint16_t len)
 
 void tb_on_coc_sent(void)
 {
+	LOG_DBG("coc tx sent at %lld ms", (long long)k_uptime_get());
 	s_tx_inflight = false;
 	if (s_tx_n != 0u) {
 		s_tx_head = (uint8_t)((s_tx_head + 1u) % ARRAY_SIZE(s_tx));
