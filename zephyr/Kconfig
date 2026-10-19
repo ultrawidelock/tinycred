@@ -18,13 +18,22 @@ config TINYCRED_TINYBLE
 	bool "BLE transport on tinyble"
 	depends on TINYBLE
 	default y
+	select TINYBLE_COC
+	select TINYBLE_ALIRO
+	select TINYBLE_RSSI if TINYCRED_RSSI_GATE
 	help
 	  The 0xFFF2 reader service, the L2CAP credit-based channel on SPSM
-	  0x0080 and the resolvable advertisement, on tinyble.
+	  0x0080 and the resolvable advertisement, on tinyble
+	  (port/tinyble/ble_tinyble.c, include/tinycred/ble_tinyble.h).
 
 config TINYCRED_RSSI_GATE
 	bool "Hold ranging until the BLE link's RSSI says the phone is near"
 	default y
+
+config TINYCRED_RSSI_GATE_POLL_MS
+	int "RSSI sample period while the channel is up (ms)"
+	depends on TINYCRED_RSSI_GATE
+	default 250
 
 config TINYCRED_STEPUP
 	bool "Credential step-up (Access Document) phase"

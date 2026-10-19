@@ -251,7 +251,7 @@ enum tc_lat_phase {
 };
 
 #define tc_lat_begin()           ((void)0)
-#define tc_lat_mark(phase)       ((void)(phase), 0)
+#define tc_lat_mark(phase)       ((void)(phase))
 #define tc_lat_report()          ((void)0)
 #define tc_lab_set_enabled(on)   ((void)(on))
 #define tc_lab_enabled()         false
