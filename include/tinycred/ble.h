@@ -55,9 +55,8 @@ struct tc_ble_config {
 /* ---- Owned-host mode: the port brings NimBLE up, this registers on it ------ *
  * Bring-up splits in two because only half of it is portable. The port does the
  * platform half -- persistent storage, nimble_port_init(), and starting the host
- * task -- and calls these for the rest. See each port's bring-up file:
- * ports/esp32/components/tc_ble/tc_ble_esp32.c and
- * ports/freertos-nrf52833/ble/tc_ble_freertos.c. */
+ * task -- and calls these for the rest. See the port's bring-up file:
+ * port/tinyble/ble_tinyble.c. */
 
 /** Start NimBLE, register the credential GATT service, and begin advertising.
  *  Implemented by the port, not by the shared backend: it is the platform half

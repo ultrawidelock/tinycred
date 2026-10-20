@@ -343,8 +343,7 @@ void tc_approach_init(struct tc_approach *ap,
 	 * tc_approach_feed(). The second failure is silent and total -- the
 	 * lock simply stops auto-unlocking -- so it is worth a clamp rather than
 	 * a comment. The default band makes this a no-op; it exists for callers
-	 * that narrow unlock_cm/relock_cm and keep the default approach_cm, which
-	 * ports/esp32 is one config change away from doing.
+	 * that narrow unlock_cm/relock_cm and keep the default approach_cm.
 	 */
 	if (ap->cfg.approach_cm > 0 && (ap->cfg.approach_cm <= ap->cfg.unlock_cm ||
 					ap->cfg.approach_cm >= ap->cfg.relock_cm)) {

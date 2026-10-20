@@ -617,8 +617,8 @@ static int loopback(struct tc_device *dev_out,
  * lands. Two properties have to hold and neither is covered by test 4b (which
  * hand-builds a block): the keys are the ones the READER derived from ITS block,
  * and the counters stay in lockstep across the real SDU order. Payload bodies are
- * opaque here on purpose — M1-M4 content is proven against the live reader engine
- * in tests/host/test_device_uwb.c; what is under test is the channel. */
+ * opaque here on purpose — M1-M4 content is tinyuwb's to test; what is
+ * under test is the channel. */
 static void test_ranging_channel_after_auth1(struct tc_device *dev,
 					     const uint8_t block[TC_KEY_BLOCK_LEN])
 {
@@ -689,9 +689,7 @@ static void test_ranging_channel_after_auth1(struct tc_device *dev,
 }
 #endif
 
-/* The full self-test body, callable from the host main() below and from the
- * on-target app_main() (tests/on_target/esp32/tinycred-device-ec), which runs the same
- * suite against the real PSA P-256 backend instead of the host fake curve. */
+/* The full self-test body, called from the host main() below. */
 int tc_device_selftest(void)
 {
 	printf("== tc_device: initiator-side codec + crypto ==\n");

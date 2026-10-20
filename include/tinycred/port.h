@@ -211,7 +211,7 @@ unsigned tc_osal_host_advance_ms(int64_t ms);
 #error "tinycred/port.h: build under Zephyr or define TC_PORT_HOST"
 #endif
 
-/* The contract, identical on both backends (port/host/osal_host.c, port/zephyr/osal.c). */
+/* The contract, identical on both backends (port/host/osal_host.c, port/zephyr/osal_zephyr.c). */
 void tc_work_init(struct tc_work *work, tc_work_fn fn);
 int tc_work_submit(struct tc_work *work);
 void tc_dwork_init(struct tc_dwork *dwork, tc_dwork_fn fn);
