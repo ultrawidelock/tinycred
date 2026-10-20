@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file ble_tinyble.h — what the application adds on top of tinycred/ble.h when the
  * transport is tinyble (CONFIG_TINYCRED_TINYBLE). tinyble has one advertiser, shared with
  * the Matter commissioning advertisement, so the application decides which one is on.

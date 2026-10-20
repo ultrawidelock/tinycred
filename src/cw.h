@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // Tiny definite-length CBOR writer shared by the step-up translation units
 // (tc_stepup.c Sig_structure/seal, tc_stepup_wire.c request/SessionData
 // codecs). Error-latching: any overflow sets err and later calls no-op.

@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host test for the credential reader engine (tc_reader.c): the AUTH0 -> AUTH1 ->
  * EXCHANGE -> AP-Completed transaction, driven end-to-end by a scripted phone.

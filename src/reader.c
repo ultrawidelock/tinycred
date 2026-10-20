@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential reader engine: drives the Access Protocol (AUTH0/AUTH1/EXCHANGE) handshake over BLE,
 // manages reader identity and credential trust provisioning in NVS, and arms UWB ranging once
 // a session is authenticated. Maintains a fixed-size table of per-connection sessions tracking

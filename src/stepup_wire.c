@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // Crypto-free wire codecs for the credential step-up phase: the mdoc DeviceRequest builders, the
 // SessionData {"data": bstr} envelope without the AES-GCM channel (raw wrap/unwrap), the NFC
 // DO'53 TLV wrapper, the fragmenting ENVELOPE / extended GET RESPONSE APDU builders, and the

@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * osal_host.c - the host backend of tc_osal.h, which IS the test double.
  *

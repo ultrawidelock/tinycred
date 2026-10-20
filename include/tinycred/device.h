@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential initiator (User-Device) session layer: the device-side counterpart of
 // tc_reader.c. Drives the credential-auth handshake from the phone/fob role:
 // parses the reader's AUTH0/AUTH1/EXCHANGE commands, runs the mirror-image key

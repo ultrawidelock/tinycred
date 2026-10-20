@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /* Minimal strict BER/DER-TLV reader for credential APDU payloads. Promoted from
  * tc_cred_stack (protocol/tlv.h) as the one TLV codec both stacks share. */
 #pragma once

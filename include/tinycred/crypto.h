@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential crypto public API: key derivation, AES-GCM secure channels, and wire message
 // seal/open framing shared by the reader and device sides of a credential session.
 /*

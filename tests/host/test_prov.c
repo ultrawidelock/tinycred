@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file test_prov.c — reader identity + trust store (de)serialisation KAT.
  *
  * Backs the `tinycred-export` / `tinycred-import` clone path: a blob written on one

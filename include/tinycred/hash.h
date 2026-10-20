@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file hash.h — SHA-256, HMAC-SHA-256, HKDF (RFC 5869) and the ANSI X9.63 KDF, the
  * key-schedule primitives of the credential transaction. The hash and the HMAC are
  * tinypsa's backend (tp_be_sha256_*, tp_be_hmac_sha256_*); the two KDFs are built on them

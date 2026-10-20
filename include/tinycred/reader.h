@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * tc_reader: credential reader session/transaction layer. Owns the per-connection
  * credential transaction on top of the tc_ble transport: session lifecycle, the

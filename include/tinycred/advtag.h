@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential BLE advertisement Dynamic Tag derivation (credential 1.0 section 11.3.1): the 7-byte
 // GroupResolvingKey-resolvable tag the phone recomputes to identify a reader of interest.
 /*

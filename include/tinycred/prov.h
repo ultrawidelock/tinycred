@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // Persistent reader provisioning storage: identity and credential trust anchors saved to and
 // loaded from NVS.
 // Declares tc_prov_store for committing an identity/trust pair to NVS, and struct

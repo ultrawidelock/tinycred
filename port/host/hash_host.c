@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Portable SHA-256 + HMAC/HKDF/X9.63-KDF. See tc_hash.h.
  */

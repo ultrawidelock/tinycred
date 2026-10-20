@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // Binds the tc_assert P-256 seam to tc_prim's ECDSA (see
 // tc_assert_ec.h). The only file in the presence path with a crypto-backend dependency,
 // which is exactly why it is separate: tc_assert.c stays backend-free.

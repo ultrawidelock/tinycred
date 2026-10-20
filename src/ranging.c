@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file ranging.c — the post-auth M1-M4 ranging setup on tinyuwb's setup service: on a
  * completed credential authentication the session is opened with the derived URSK, the
  * engine's outbound SDUs are BleSK-sealed onto the peer's L2CAP channel, inbound M2 and M4

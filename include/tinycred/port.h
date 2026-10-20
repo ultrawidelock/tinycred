@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file port.h — what tinycred asks of the platform: a clock, a mutex, one atomic exchange,
  * work items, a semaphore, one thread, and the log macros. Two backends: Zephyr (the target)
  * and the host test double (TC_PORT_HOST), whose work and clock are driven by the suite

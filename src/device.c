@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential initiator (User-Device) session machine: the implementation behind
 // tc_device.h. Feeds one reader command at a time through
 // tc_device_on_command, which parses AUTH0/AUTH1/EXCHANGE with the inverse

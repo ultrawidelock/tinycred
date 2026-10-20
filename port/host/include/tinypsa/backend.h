@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /* The slice of tinypsa's backend contract tinycred uses, for the host build. The target
  * includes tinypsa's own header. */
 #ifndef TINYPSA_BACKEND_H

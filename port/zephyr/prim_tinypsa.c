@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file prim_tinypsa.c — tinycred/prim.h on tinypsa's backend: no PSA key objects, the
  * key bytes go straight to the primitive. Points cross the seam uncompressed (0x04 x y, 65
  * octets); tinypsa takes x || y (64 octets).

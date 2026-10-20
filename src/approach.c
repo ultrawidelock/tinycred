@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /**
  * @file tc_approach.c
  * Kalman-filtered approach controller for predictive unlock. Tracks distance (cm), velocity (cm/s),

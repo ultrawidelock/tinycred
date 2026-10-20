@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential step-up (Access Document) phase: builds the mdoc DeviceRequest, unwraps and decrypts
 // the SessionData DeviceResponse, decodes the CBOR document per spec 7.2/8.4.2, and runs the
 // six-step Access Document verification of spec 7.4. Reference-completeness codec + verifier; the

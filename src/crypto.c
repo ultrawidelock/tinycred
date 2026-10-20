@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential cryptographic primitives: key derivation (KDF/HKDF), key-block splitting, AES-GCM
 // secure channels, and wire message framing built on a pluggable crypto backend
 // (tc_prim_*). Implements the credential key-derivation chain (ECDH shared secret -> z

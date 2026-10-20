@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // APDU framing and parsing for the credential Access Protocol: builds outbound command APDUs via a
 // TLV writer and parses the AUTH0/AUTH1 response APDUs exchanged during the reader-device
 // handshake.

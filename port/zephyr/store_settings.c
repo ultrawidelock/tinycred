@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file store_settings.c — tc_prov_load, tc_prov_store and tc_prov_erase on Zephyr's
  * settings subsystem: one record, "tinycred/prov", holding the serialized identity and
  * trust store. The blob is static and shared by load and store under one lock, because it

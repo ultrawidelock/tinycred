@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // Device (User-Device) side of the credential Access-Protocol wire codec: the inverse
 // of tc_apdu.c. Where tc_apdu builds reader commands and parses device
 // responses, this parses the reader's AUTH0/AUTH1/EXCHANGE commands and builds

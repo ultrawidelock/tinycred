@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /**
  * @file tc_tlv.c
  * BER-TLV parser and encoder for credential protocol: parse TLVs with definite length and advance

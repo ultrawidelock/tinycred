@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential reader provisioning state: default dev identity, and serialization/deserialization of
 // the reader identity plus trusted-credential store to/from a self-describing binary blob. Also
 // implements the trust-store membership check and add-with-dedup operations used to decide whether

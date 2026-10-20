@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file hash.c — the KDFs of tinycred/hash.h on tinypsa's SHA-256 and HMAC. */
 
 #include "tinycred/hash.h"

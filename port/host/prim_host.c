@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host double for the tc_prim backend so the key-schedule and secure-channel
  * code can be tested off-target. Provides a compact reference AES-256-GCM (the

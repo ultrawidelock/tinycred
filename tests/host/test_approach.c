@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file test_approach.c — predictive approach controller ("negative
  * latency"): ETA-scheduled fire timing, abort invariants, and the preserved
  * median/dwell presence path, replayed over synthetic walk-up profiles —

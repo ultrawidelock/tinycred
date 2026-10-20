@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * osal_zephyr.c - the Zephyr backend of tc_osal.h: 1:1 onto k_work,
  * k_work_delayable, k_sem and k_thread on the system workqueue, plus the

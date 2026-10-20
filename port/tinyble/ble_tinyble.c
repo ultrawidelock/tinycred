@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file ble_tinyble.c — tinycred/ble.h on tinyble: the credential transaction on tinyble's
  * one L2CAP credit based channel (tb_coc.h), the 0xFFF2 service tinyble's Matter table
  * already serves (tb_aliro.h), the resolvable advertisement with its dynamic tag, and the

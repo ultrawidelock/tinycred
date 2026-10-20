@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host KAT for the credential wire codec (tc_apdu): AUTH0/AUTH1 command bytes, the
  * ECDSA transcript, EXCHANGE 0x98 trigger, the L2CAP envelope, and response

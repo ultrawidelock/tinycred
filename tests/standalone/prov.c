@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host KAT for the reader provisioning core (tc_prov.c): the dev identity,
  * blob (de)serialisation round-trip + malformed-blob rejection, and the trust

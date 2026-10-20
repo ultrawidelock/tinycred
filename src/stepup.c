@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential step-up phase crypto + verifier: derives the StepUpSK SessionData keys, seals/opens
 // SessionData over the tc_secchan AES-256-GCM channel (envelope codec factored onto the
 // raw wrap/unwrap in tc_stepup_wire.c), builds the simple ENVELOPE/GET RESPONSE APDUs,

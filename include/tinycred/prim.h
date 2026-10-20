@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * tc_prim — the symmetric-crypto + elliptic-curve + RNG primitive
  * interface used by the portable modules. Target builds use

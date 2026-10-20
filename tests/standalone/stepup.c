@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host known-answer test for the credential step-up (Access Document) codec + §7.4
  * verifier. Pure host build (no ESP-IDF, no hardware), compiled from the same

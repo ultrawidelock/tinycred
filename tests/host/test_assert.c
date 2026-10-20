@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file test_assert.c — presence-assertion codec + verifier.
  *
  * The security core of the non-door primitive: a spoofed USB device must not be

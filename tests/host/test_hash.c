@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file test_hash.c — SHA-256 / HMAC / HKDF / X9.63 KATs.
  *
  * tc_hash.c is the portable crypto the presence assertion (and the whole

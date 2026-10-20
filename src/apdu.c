@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential APDU TLV codec: builds command payloads (AUTH0, AUTH1, AuthData, EXCHANGE) and parses
 // response APDUs, plus BLE envelope framing/unframing and ISO7816 APDU wrap/status-word stripping.
 // Provides a minimal BER-TLV writer (tc_tlv_w_init/put/finish) used to assemble command

@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host known-answer test for tc_crypto's portable SHA-256/KDF core (the
  * interop-critical key-schedule primitives) plus the URSK block extraction.

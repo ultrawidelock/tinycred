@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /** @file fakes.c — the suite's doubles for the BLE transport, the provisioning store and
  * the ranging bridge, enough for reader.c to link; the standalone reader program carries
  * fuller recording versions of the same. */

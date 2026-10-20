@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 // credential BLE-UWB reader transport: GATT service definition, advertised feature flags, and
 // transport callbacks connecting the BLE peripheral role to the credential protocol handler in
 // tc_reader. Callers configure the transport via tc_ble_prepare (which builds

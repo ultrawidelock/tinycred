@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /*
  * Host tests for the credential initiator (device) side: tc_device_apdu (inverse
  * wire codec) + tc_device (AP secure channel, cryptogram sealer, standard-path

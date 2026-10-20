@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 Aseem Chopra */
+/* SPDX-License-Identifier: Apache-2.0 */
+
 /* Context sizes for tinycred's host port, in bytes: what port/host/hash_host.c and the
  * carried primitive double need. tinypsa's own header replaces this on the target. */
 #ifndef TINYPSA_BACKEND_CTX_H
