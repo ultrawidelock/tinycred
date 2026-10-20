@@ -35,7 +35,7 @@ LOG_MODULE_REGISTER(tinycred_ranging, CONFIG_TINYCRED_LOG_LEVEL);
 static const struct tu_setup_caps k_caps = {
 	.slot_bitmask = 0xFFu,
 	.sync_code_index_bitmask = 0x00000F00u,
-	.hopping_config_bitmask = 0x1Au,
+	.hopping_config_bitmask = 0xD0u,
 	.channel_bitmask = TU_RS_CHANNEL_BITMASK_CH5 | TU_RS_CHANNEL_BITMASK_CH9,
 	.uwb_config_id = 0x0000u,
 	.pulse_shape_combo = 0x00u,
