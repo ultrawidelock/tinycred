@@ -8,7 +8,7 @@ opens the bolt as the phone arrives. Portable C11.
 ranging setup, an RSSI gate before ranging. Optional: step-up, a
 line-of-sight classifier, the phone side for bench tests.
 
-12,955 B flash, 6,807 B RAM, LTO release build.
+12.7 KB flash, 6.6 KB RAM, LTO release build.
 
 ## Use
 
