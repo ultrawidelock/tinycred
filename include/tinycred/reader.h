@@ -134,6 +134,13 @@ void tc_reader_set_access_listener(void (*cb)(bool granted));
  * Safe to call from any task. */
 bool tc_reader_authenticated_credential(uint8_t cred_pub[65]);
 
+/* The Door Lock user index that credential is filed under (SetCredential's
+ * userIndex, kept with the trust anchor), for the LockOperation event. Returns
+ * true and writes it when a credential has authenticated since boot and its
+ * anchor came from Matter with a user; false otherwise (a bench-added anchor,
+ * the dev identity, nothing authenticated yet). Safe to call from any task. */
+bool tc_reader_authenticated_user_index(uint16_t *user_index);
+
 /* ---- Demand-driven presence proof --------------------------------------- *
  * A proof must not reuse the credential/range latches from a prior walk-up.
  * restart() marshals a disconnect of every current credential link onto the BLE

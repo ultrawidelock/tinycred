@@ -2241,6 +2241,26 @@ bool tc_reader_authenticated_credential(uint8_t out[TC_CRED_PUB_LEN])
 	return have;
 }
 
+bool tc_reader_authenticated_user_index(uint16_t *user_index)
+{
+	bool have = false;
+	int ki;
+
+	load_provisioning();
+
+	tc_mutex_lock(&s_prov_lock);
+	if (s_have_auth_cred) {
+		ki = tc_prov_trust_find(&s_trust, s_auth_cred_pub);
+		if (ki >= 0 && s_trust.user_index[ki] != TC_CRED_INDEX_NONE) {
+			*user_index = s_trust.user_index[ki];
+			have = true;
+		}
+	}
+	tc_mutex_unlock(&s_prov_lock);
+
+	return have;
+}
+
 /**
  * Return true and copy the reader's single expected credential public key to out if exactly one
  * trust anchor is configured; used to validate single-device scenarios.
